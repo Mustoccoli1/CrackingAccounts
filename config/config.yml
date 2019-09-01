@@ -1,0 +1,68 @@
+# You can edit anything you need!
+settings:
+  #  -----------------------------------------------------
+  #  |                                                   |
+  #  |             ---- MAIN SETTING ----                |
+  #  |                                                   |
+  #  -----------------------------------------------------
+
+  # Threads are the maximum count of accounts that can be checked simultaneous.
+  # More threads, faster checking, too much CPU overload computer broken :<
+  # Recommend: 150.
+  threads: 250
+  
+  # Tries are the amount of tries we will give to an account, this is made to avoid Mojang silent-bans.
+  # You must to trade between speed and accuracy. Recommend: 3.
+  recheck: 3
+  # If it true, Lazy Checker will save fail accounts to fail.txt.
+  # It can cause wasting your ram, cpu if it enable!
+  save-fail: false
+  
+  # If it true, Lazy checker will print fail account to console!
+  print-fail-console: false
+  
+# It is not Recommend to use free/public/scrapped proxies since most of them are Mojang banned, so won't get you hits
+proxies:
+  #  -----------------------------------------------------
+  #  |                                                   |
+  #  |           ---- PROXY SETTING ----                 |
+  #  |                                                   |
+  #  -----------------------------------------------------
+
+  # Should Lazy Checker use proxies (you supply them in proxies.txt)(You Can Use Proxies With Auth (IP:Port:User:Pass) Or Rotating Proxies) 
+  # Using proxies is HIGHLY recommend for checking large amounts of accounts, especially if you think there's a lot that do not work (mojang slient ban).
+  use: true
+  
+  # You can choose between HTTP, SOCKS
+  type: HTTP
+  
+  # Connection timeout of your proxies in case you know some could be not working.
+  # Higher timeout is then slower for non-working proxies.
+  # Note: timeout in millisecond now!
+  timeout: 10000
+  
+modules:
+  #  -----------------------------------------------------
+  #  |                                                   |
+  #  |           ---- CAPTURE CHECK ----                 |
+  #  |                                                   |
+  #  -----------------------------------------------------
+  
+  # Should Lazy Checker check name account have in dictionary.
+  og-name: true
+
+  # Should Lazy Checker check the account for if it has a vanilla cape? (Minecon, Realms, Translator, etc)
+  mojang-cape: true
+  
+  # Should Lazy Checker check the account for if it has an Optifine cape?
+  optifine-cape: true
+  
+  hypixel-server:
+    # Should Lazy Checker check for the accounts Hypixel have rank? (VIP, VIP+, MVP,...)
+    check-rank: true
+    
+    # Should Lazy Checker check for the accounts Hypixel reach minimum level?
+    check-level: true
+    
+    # The minimum level to check for on Hypixel
+    min-level-to-check: 25
